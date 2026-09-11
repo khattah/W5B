@@ -18,7 +18,7 @@ $max-width: 1200px;
 
 * {
     margin: 0;
-    padding: 0;
+    padding: px;
     box-sizing: border-box;
 }
 
@@ -639,18 +639,18 @@ button {
 // MOBILE VIEW
 // ========================================
 
-@media (max-width: 600px) {
+@media (max-width: 60px) {
 
     .site-header {
         min-height: auto;
         padding: 0;
     }
 
-    .logo {
-        width: 100%;
-        font-size: 22px;
-        text-align: center;
-    }
+   .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: gre;
+}
 
     .view-navigation {
         width: 100%;
