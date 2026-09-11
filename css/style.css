@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.site-header {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+}
+
+.logo {
+  background-color: #d71920;
+  color: #ffffff;
+  padding: 20px 30px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.view-navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-navigation button {
+  border: none;
+  background-color: transparent;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.view-navigation button:hover {
+  background-color: #d71920;
+  color: #ffffff;
+}
+
+.view-navigation button.active {
+  background-color: #d71920;
+  color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 4%;
+  }
+  .logo {
+    padding: 18px 24px;
+    font-size: 24px;
+  }
+  .view-navigation button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    padding: 0;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+  }
+  .view-navigation {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+  .view-navigation button {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+.site-footer {
+  background-color: #222222;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 0;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.section {
+  padding: 80px 6%;
+}
+
+.section-heading {
+  max-width: 1200px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.small-title {
+  color: #d71920;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  color: #222222;
+}
+
+.intro {
+  max-width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 70px 6%;
+}
+
+.intro-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.intro-profile h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  color: #222222;
+  margin-bottom: 15px;
+}
+
+.intro-profile h2 {
+  font-size: 24px;
+  color: #d71920;
+  margin-bottom: 20px;
+}
+
+.intro-profile p {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.main-button {
+  display: inline-block;
+  padding: 13px 25px;
+  background-color: #d71920;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.main-button:hover {
+  background-color: #222222;
+}
+
+.profile {
+  background-color: #f5f5f5;
+}
+
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.profile-text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.profile-details {
+  display: grid;
+  gap: 20px;
+}
+
+.detail {
+  background-color: #ffffff;
+  padding: 25px;
+  border-left: 4px solid #d71920;
+}
+
+.detail h3 {
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.mobile-gallery {
+  background-color: #f5f5f5;
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #dddddd;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.team {
+  background-color: #ffffff;
+}
+
+.team-slider {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  width: 500px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+}
+
+.team-member h3 {
+  font-size: 28px;
+  color: #222222;
+}
+
+.team-member h4 {
+  color: #d71920;
+  margin: 5px 0 15px;
+}
+
+.slider-button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d71920;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  background-color: #222222;
+}
+
+.services {
+  background-color: #f5f5f5;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  color: #d71920;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  color: #222222;
+}
+
+.projects-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.project-image {
+  height: 220px;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.contact {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.contact-details {
+  margin-top: 25px;
+}
+
+.view-desktop .intro {
+  grid-template-columns: 1fr 1fr;
+}
+.view-desktop .profile-content {
+  grid-template-columns: 1fr 1fr;
+}
+.view-desktop .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.view-desktop .services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.view-desktop .projects-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.view-tablet .intro {
+  max-width: 900px;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.view-tablet .intro-profile h1 {
+  font-size: 40px;
+}
+.view-tablet .profile-content {
+  grid-template-columns: 1fr 1fr;
+}
+.view-tablet .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 180px);
+}
+.view-tablet .services-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.view-tablet .projects-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.view-mobile .site-header {
+  min-height: 70px;
+  padding: 0 20px;
+}
+.view-mobile .logo {
+  font-size: 22px;
+}
+.view-mobile .view-navigation {
+  gap: 2px;
+}
+.view-mobile .view-navigation button {
+  padding: 7px 8px;
+  font-size: 12px;
+}
+.view-mobile .intro {
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 50px 20px;
+}
+.view-mobile .intro-image img {
+  width: 250px;
+  height: 280px;
+}
+.view-mobile .intro-profile h1 {
+  font-size: 34px;
+}
+.view-mobile .intro-profile h2 {
+  font-size: 19px;
+}
+.view-mobile .section {
+  padding: 55px 20px;
+}
+.view-mobile .section-heading h2 {
+  font-size: 32px;
+}
+.view-mobile .profile-content {
+  grid-template-columns: 1fr;
+}
+.view-mobile .gallery-grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 250px);
+}
+.view-mobile .team-slider {
+  gap: 10px;
+}
+.view-mobile .team-member {
+  width: 100%;
+}
+.view-mobile .team-member img {
+  width: 200px;
+  height: 200px;
+}
+.view-mobile .slider-button {
+  width: 38px;
+  height: 38px;
+}
+.view-mobile .services-grid {
+  grid-template-columns: 1fr;
+}
+.view-mobile .projects-grid {
+  grid-template-columns: 1fr;
+}
+
+/*# sourceMappingURL=style.css.map */
