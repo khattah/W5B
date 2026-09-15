@@ -1,77 +1,80 @@
-.site-header {
+scss .site-header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dddddd;
 }
 
-/* Row 1 - Logo */
+.logo-bar {
+  width: 100%;
+  background-color: #000000;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .logo {
-  width: 100%;
-  background-color: #d71920;
-  color: #ffffff;
-  padding: 20px 30px;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-align: left;
+  color: #808080;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
 
-/* Row 2 - Navigation */
 .view-navigation {
   width: 100%;
+  background-color: #ff0000;
+  padding: 12px 0;
+}
+
+.buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px;
-  background-color: #ffffff;
+  align-items: center;
+  gap: 15px;
 }
 
 .view-navigation button {
+  background-color: #ffffff;
+  color: #000000;
   border: none;
-  background-color: transparent;
-  padding: 10px 18px;
+  padding: 10px 25px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 4px;
+  font-family: inherit;
 }
 
 .view-navigation button:hover {
-  background-color: #d71920;
-  color: #ffffff;
+  background-color: #dddddd;
 }
 
-.view-navigation button.active {
-  background-color: #d71920;
-  color: #ffffff;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
+  .logo-bar {
+    padding: 18px 0;
+  }
   .logo {
-    text-align: center;
+    font-size: 30px;
+  }
+  .view-navigation {
+    padding: 10px 0;
+  }
+  .view-navigation button {
+    padding: 9px 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .logo-bar {
+    padding: 15px 0;
+  }
+  .logo {
+    font-size: 26px;
+  }
+  .view-navigation {
+    padding: 10px 0;
+  }
+  .buttons {
+    gap: 8px;
   }
   .view-navigation button {
     padding: 8px 14px;
-    font-size: 14px;
-  }
-}
-/* Mobile */
-@media (max-width: 600px) {
-  .logo {
-    font-size: 24px;
-    padding: 18px;
-  }
-  .view-navigation {
-    gap: 5px;
-    padding: 10px;
-  }
-  .view-navigation button {
-    padding: 8px 10px;
     font-size: 13px;
   }
 }
@@ -99,40 +102,18 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: black;
-  background-color: #ffffff;
-  line-height: 1.6;
-}
-
-body {
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  color: #000000;
   background-color: #ffffff;
   line-height: 1.6;
-  transition: 0.3s;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  background-color: #ffffff;
-  line-height: 1.6;
-  transition: 0.3s;
-}
-
-/* Desktop */
-body {
   font-size: 18px;
 }
 
-/* Tablet */
 @media screen and (max-width: 1024px) {
   body {
     font-size: 16px;
   }
 }
-/* Mobile */
 @media screen and (max-width: 600px) {
   body {
     font-size: 14px;
@@ -142,8 +123,8 @@ body {
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  background-color: #333;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   border-radius: 5px;
   margin: 5px;
 }
@@ -160,108 +141,8 @@ a {
   text-decoration: none;
 }
 
-.team {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.team .team-member {
-  width: 300px;
-}
-
 button {
   font-family: inherit;
-}
-
-.site-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dddddd;
-}
-
-/* Row 1 - Logo */
-.logo {
-  width: 100%;
-  background-color: #d71920;
-  color: #ffffff;
-  padding: 20px 30px;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-align: left;
-}
-
-/* Row 2 - Navigation */
-.view-navigation {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px;
-  background-color: #ffffff;
-}
-
-.view-navigation button {
-  border: none;
-  background-color: transparent;
-  padding: 10px 18px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.view-navigation button:hover {
-  background-color: #d71920;
-  color: #ffffff;
-}
-
-.view-navigation button.active {
-  background-color: #d71920;
-  color: #ffffff;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .logo {
-    text-align: center;
-  }
-  .view-navigation button {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-}
-/* Mobile */
-@media (max-width: 600px) {
-  .logo {
-    font-size: 24px;
-    padding: 18px;
-  }
-  .view-navigation {
-    gap: 5px;
-    padding: 10px;
-  }
-  .view-navigation button {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-}
-.site-footer {
-  background-color: #222222;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 0;
-}
-
-.site-footer p {
-  margin: 0;
-  font-size: 14px;
 }
 
 .section {
@@ -274,25 +155,8 @@ button {
   text-align: center;
 }
 
-.project-image {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
 .small-title {
-  color: red;
+  color: #ff0000;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -301,7 +165,7 @@ button {
 
 .section-heading h2 {
   font-size: 40px;
-  color: black;
+  color: #000000;
 }
 
 .intro {
@@ -320,24 +184,29 @@ button {
   display: flex;
   justify-content: center;
 }
-
 .intro-image img {
   width: 400px;
   height: 450px;
   object-fit: cover;
   border-radius: 10px;
+  animation: fadeIn 1.2s ease-in-out;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.intro-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .intro-profile h1 {
   font-size: 52px;
   line-height: 1.1;
-  color: black;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .intro-profile h2 {
   font-size: 24px;
-  color: red;
+  color: #ff0000;
   margin-bottom: 20px;
 }
 
@@ -349,19 +218,18 @@ button {
 .main-button {
   display: inline-block;
   padding: 13px 25px;
-  background-color: red;
+  background-color: #ff0000;
   color: #ffffff;
   border-radius: 5px;
   font-weight: 700;
   transition: 0.3s;
 }
-
 .main-button:hover {
-  background-color: black;
+  background-color: #000000;
 }
 
 .profile {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .profile-content {
@@ -385,12 +253,12 @@ button {
 .detail {
   background-color: #ffffff;
   padding: 25px;
-  border-left: 4px solid red;
+  border-left: 4px solid #ff0000;
 }
 
 .detail h3 {
   margin-bottom: 8px;
-  color: black;
+  color: #000000;
 }
 
 .about-content {
@@ -405,7 +273,7 @@ button {
 }
 
 .mobile-gallery {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .gallery-grid {
@@ -422,16 +290,15 @@ button {
   border-radius: 8px;
   background-color: #dddddd;
 }
-
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .team {
@@ -445,28 +312,33 @@ button {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .team-member {
-  width: 500px;
+  width: 300px;
   text-align: center;
 }
-
 .team-member img {
   width: 260px;
   height: 260px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.team-member img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .team-member h3 {
   font-size: 28px;
-  color: black;
+  color: #000000;
 }
 
 .team-member h4 {
-  color: red;
+  color: #ff0000;
   margin: 5px 0 15px;
 }
 
@@ -475,18 +347,17 @@ button {
   height: 45px;
   border: none;
   border-radius: 50%;
-  background-color: red;
+  background-color: #ff0000;
   color: #ffffff;
   font-size: 22px;
   cursor: pointer;
 }
-
 .slider-button:hover {
-  background-color: black;
+  background-color: #000000;
 }
 
 .services {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .services-grid {
@@ -504,14 +375,13 @@ button {
   text-align: center;
   transition: 0.3s;
 }
-
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
-  color: red;
+  color: #ff0000;
   font-size: 25px;
   font-weight: 800;
   margin-bottom: 15px;
@@ -519,7 +389,7 @@ button {
 
 .service-card h3 {
   margin-bottom: 12px;
-  color: black;
+  color: #000000;
 }
 
 .projects-grid {
@@ -536,16 +406,22 @@ button {
   overflow: hidden;
   background-color: #ffffff;
 }
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
 
 .project-image {
+  width: 100%;
   height: 220px;
+  overflow: hidden;
   background-color: #333333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: bold;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 .project-content {
@@ -554,11 +430,11 @@ button {
 
 .project-content h3 {
   margin-bottom: 10px;
-  color: black;
+  color: #000000;
 }
 
 .contact {
-  background-color: white;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -572,6 +448,16 @@ button {
   margin-top: 25px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (min-width: 901px) {
   .intro {
     grid-template-columns: 1fr 1fr;
@@ -612,25 +498,11 @@ button {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .team-member {
+    width: 300px;
+  }
 }
 @media (max-width: 600px) {
-  .site-header {
-    min-height: auto;
-    padding: 0;
-  }
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: grey;
-  }
-  .view-navigation {
-    width: 100%;
-    gap: 2px;
-  }
-  .view-navigation button {
-    padding: 7px 8px;
-    font-size: 12px;
-  }
   .intro {
     grid-template-columns: 1fr;
     text-align: center;
@@ -660,7 +532,8 @@ button {
     grid-template-rows: repeat(6, 250px);
   }
   .team-slider {
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
   }
   .team-member {
     width: 100%;
@@ -679,6 +552,25 @@ button {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+  .project-image {
+    height: 200px;
+  }
+}
+.p {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.p:hover {
+  transform: scale(1.08);
+  opacity: 0.7;
+}
+
+img {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
